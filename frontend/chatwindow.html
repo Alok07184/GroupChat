@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Window</title>
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            width: 100%;
+            height: 100%;
+        }
+        h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .maindiv{
+            display: flex !important;
+           flex-direction: row !important;
+           
+            
+        }
+       #groups{
+        background-color: rgba(159, 108, 207, 0.37);
+        border: 1px solid black;
+      padding: 1.2rem;
+      width: fit-content;
+        position: fixed;
+
+       }
+        #chats{
+            width: 60%;
+            margin-bottom: 12%;
+            margin: 0 20%;
+            margin-bottom: 9%;
+            background-color: rgb(169, 233, 212);
+            border: 1px solid black;
+            padding: 0 20%;
+            
+        }
+       
+        .sendmessage{
+            position: fixed;
+            bottom: 0px;
+            width :100%;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            
+        }
+        button{
+            background-color: cadetblue;
+            color: white;
+            font-weight: bold;
+            padding: 0.3rem;
+            cursor: pointer;
+        }
+        button:hover{
+            color: steelblue;
+            background-color: rgb(171, 230, 12);
+        }
+        
+    </style>
+</head>
+<body>
+    
+<h1>Chat APP</h1>
+<div class="maindiv">
+    <div id="groups">
+     <form action="" id="create" onsubmit="return false">
+    <input type="text" id="nameofgroup" placeholder="Name of Group" >
+    <br>
+    <button id="submit" onclick="creategroup('create')">Creat A Group</button>
+    </form>
+    </div>
+  <div  id="chats">
+  </div>
+  </div>
+  
+
+    <div class="sendmessage" >
+        <form action="" id="messages" onsubmit="return false">
+        <input type="text" id="message" placeholder="Type your Text" size="100" height="25">
+        <button type="submit" onclick="sendtext('messages')">Send</button>
+        </form>
+    </div>
+    
+ 
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="chating.js"></script>
+</body>
+</html>

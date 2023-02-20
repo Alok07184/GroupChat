@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign UP</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            width: 190vh;
+           height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            border: 1.5px solid rgb(5, 42, 83);
+            padding: 1rem ;
+            margin: 1rem;
+        }
+        .inputsec{
+            padding: 0.3rem;
+            margin: 1rem;
+            width: max-content;
+            height: fit-content;
+        }
+        input{
+            width: max-content;
+            height: 1rem;
+        }
+        button{
+            background-color: cadetblue;
+            color: white;
+            font-weight: bold;
+            padding: 0.3rem;
+            cursor: pointer;
+        }
+        button:hover{
+            color: steelblue;
+            background-color: rgb(171, 230, 12);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" id="signinfrm" onsubmit="return false">
+        <div  class="inputsec">
+            <div class="labeldiv">
+                <label for="name">Name</label>
+            </div>
+                <input type="text" id="name" placeholder="Alok Singh" required>
+        </div>
+
+        <div class="inputsec">
+            <div class="labeldiv">
+                <label for="email">Email Id</label>
+            </div>
+                <input type="email" id="email" placeholder="abc@gmail.com" required>
+        </div>
+        <div class="inputsec">
+            <div class="labeldiv">
+                <label for="phone">Phone</label>
+            </div>
+                <input type="number" id="phone" placeholder="123456789" required>
+        </div>
+        <div class="inputsec">
+            <div class="labeldiv">
+                <label for="password">Password</label>
+            </div>
+                <input type="password" id="password"  required>
+        </div>
+      <button type="submit" onclick="signup('signinfrm')">Submit</button>
+    </form>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
